@@ -25,8 +25,8 @@ public class Program
 Wine Light = StandardWine(20.85m)
 Wine Harsh = ExecutiveWine(35.50m, 2023)
 
-Console.WriteLine ("Standard Wine: Price = $");
-Console.WriteLine ("Executive WIne: Price = $ + Year);
+Console.WriteLine ("Standard Wine: Fee = $");
+Console.WriteLine ("Executive Wine: Fee = $ + Year);
 }
  
 
