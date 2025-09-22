@@ -10,7 +10,24 @@ public Alcohol(decimal fee, int year): this (fee) => Year = year;
 
 public class Wine : Alcohol
 {
-public void PrintInfo()
+public int Purchase;
+    public void PrintInfo()
 if (this.purchase => $50)
-   Console.WriteLine ("Your purchase qualifies for free shipping")
+   Console.WriteLine ("Your {this.purchase} qualifies for free shipping");
 }
+
+
+public class Program
+{
+    public static void Main()
+{
+
+Wine Light = StandardWine(20.85m)
+Wine Harsh = ExecutiveWine(35.50m, 2023)
+
+Console.WriteLine ("Standard Wine: Price = $");
+Console.WriteLine ("Executive WIne: Price = $ + Year);
+}
+ 
+
+
