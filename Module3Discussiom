@@ -1,1 +1,16 @@
+using system;
 
+public class Alcohol
+{
+public decimal Fee; 
+public int Year;
+public Alcohol(decimal fee) => fee = fee;
+public Alcohol(decimal fee, int year): this (fee) => Year = year;
+}
+
+public class Wine : Alcohol
+{
+public void PrintInfo()
+if (this.purchase => $50)
+   Console.WriteLine ("Your purchase qualifies for free shipping")
+}
