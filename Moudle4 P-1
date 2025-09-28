@@ -1,0 +1,60 @@
+
+using System;
+
+namespace DivisionApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("=== Division Program ===");
+
+            bool success = false;
+
+            while (!success)
+            {
+                Console.WriteLine("\nEnter first number: ");
+                string input1 = Console.ReadLine();
+
+                Console.WriteLine("Enter second number: ");
+                string input2 = Console.ReadLine();
+
+                success = PerformDivision(input1, input2);
+            }
+
+            Console.WriteLine("\nProgram finished successfully.");
+        }
+
+        static bool PerformDivision(string strNum1, string strNum2)
+        {
+            try
+            {
+                int num1 = Convert.ToInt32(strNum1);
+                int num2 = Convert.ToInt32(strNum2);
+
+                int result = num1 / num2;
+
+                Console.WriteLine($"Result of division: {num1} / {num2} = {result}");
+                return true; // success
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine($"Format Error: {ex.Message} → Enter valid whole numbers only.");
+            }
+            catch (OverflowException ex)
+            {
+                Console.WriteLine($"Overflow Error: {ex.Message} → Number too large/small for Int32.");
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine($"Math Error: {ex.Message} → You cannot divide by zero.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Unexpected Error: {ex.GetType().Name} - {ex.Message}");
+            }
+
+            return false; // keep asking
+        }
+    }
+}
